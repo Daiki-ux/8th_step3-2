@@ -92,10 +92,12 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 #アプリの作成：appでFlaskフレームワークを利用できるようにする
+
 app = Flask(__name__)
 CORS(app)
 
 #エンドポイントの設定：フロントエンドとの連携部分
+
 @app.route('/api/hello', methods=['GET'])
 def hello():
     return jsonify({'message': 'Hello World'})
@@ -106,8 +108,10 @@ def echo():
     return jsonify({'message': data['input']})
 
 #アプリの起動：app.runでアプリを実行する。
+
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 以下のコマンドを実行して Flask サーバーを起動します。
 
@@ -152,11 +156,13 @@ frontend/pages フォルダ内に、index.js というファイルが既に存�
 javascript
 
 
-#インポート：・アプリに必要なコンポーネント,関数等を使用できるようにする
+#インポート：アプリに必要なコンポーネント,関数等を使用できるようにする
+
 import { useState } from 'react';
 
 
 #ページコンポーネント（ページ生成）：export default:このモジュールからエクスポートされるデフォルト値を指定
+
 export default function Home() {
   const [input, setInput] = useState('');
   const [response, setResponse] = useState('');
@@ -198,6 +204,7 @@ export default function Home() {
 
 
 解説:
+
 useStateを使って、ユーザーの入力(input)と、Flaskサーバーからの応答(response)を管理しています。
 handleSubmit関数は、フォームが送信されたときにFlaskのAPIにPOSTリクエストを送信し、返ってきたデータを表示します。
 
@@ -218,6 +225,7 @@ backend/app.py ファイルを開き、以下のコードが正しく記述さ�
 
 
 python
+
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
