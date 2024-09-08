@@ -242,8 +242,15 @@ Flaskサーバーが動作している状態で、Postmanやブラウザで http
 3. Next.jsとFlaskの連携動作確認
 両方のサーバーを起動
 
-すでにNext.jsサーバー【http://localhost:3000】と
-Flaskサーバー【http://localhost:5000】が起動していることを確認します。
+すでにNext.jsサーバー
+http://localhost:3000
+
+と
+
+Flaskサーバー
+http://localhost:5000
+
+が起動していることを確認します。
 
 フロントエンドからバックエンドへのデータ送信
 
